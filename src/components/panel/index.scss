@@ -1,0 +1,48 @@
+.panel-title {
+  background-color: #eff4f7;
+  width: 100%;
+  padding: 13px 19px;
+  font-size: 14px;
+  color: #000000;
+  font-weight: bold;
+  letter-spacing: 0;
+  line-height: 14px;
+  text-align: left;
+  overflow: hidden;
+  box-sizing: border-box;
+  border: 0.5px solid rgba(0, 0, 0, 0.05);
+}
+
+.panel-title-icon {
+  position: relative;
+  top: -12px;
+  transition: all 0.3s;
+  transform: rotate(180deg);
+  color: #c1c1c1;
+  font-size: 12px;
+
+  &__active {
+      transform: rotate(0deg);
+  }
+}
+
+.panel-cont {
+  font-size: 14px;
+  overflow: hidden;
+  padding: 15px 20px;
+  min-height: 20px;
+  background: white;
+  color: #787878;
+  text-align: justify;
+  line-height: 22px;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: all 0.3s;
+}
+
+.fade-enter,
+.fade-leave-to {
+  opacity: 0.5;
+}
