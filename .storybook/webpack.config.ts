@@ -7,8 +7,20 @@ function resolve(dir) {
 module.exports = function({ config }) {
   config.module.rules.push({
     test: /\.scss$/,
-    loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
-    include: path.resolve(__dirname, '../')
+    // loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+    include: path.resolve(__dirname, '../'),
+    use: [
+      { loader: MiniCssExtractPlugin.loader },
+      {
+        loader: 'css-loader',
+        options: {
+          modules: {
+            localIdentName: "[local]-[hash:base64:8]",
+          },
+        }
+      },
+      { loader: 'sass-loader' }
+    ]
   });
 
   config.resolve.alias = Object.assign(config.resolve.alias, {

@@ -1,13 +1,13 @@
 <template>
-  <div class="panel">
-    <div class="panel-title" @click="checkout()">
+  <div :class="$style.panel">
+    <div :class="$style.panel_title" @click="checkout()">
       <div>{{ title }}</div>
-      <div v-if="showToggle" style="float: right; height: 0.057rem; position: relative; top: -0.08rem">
+      <div :class="$style.panel_iconBox" v-if="showToggle" style="">
         <i :class="iconClass"></i>
       </div>
     </div>
     <transition name="fade" enter-active-class="active" leave-active-class="leave">
-      <div v-show="isExpendCopy" class="panel-cont">
+      <div v-show="isExpendCopy" :class="$style.panel_cont">
         <slot name="default"></slot>
       </div>
     </transition>
@@ -15,7 +15,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, reactive, computed } from 'vue'
+import { getCurrentInstance, ref, defineComponent, reactive, computed } from 'vue'
+
+function createArray(value: any, count: number): any[] {
+  const arr: any[] = []
+  for (let index = 0; index < count; index++) {
+    arr.push(value)
+  }
+  return arr
+}
+
+const arr1 = createArray(11, 3)
+const arr2 = createArray('aa', 3)
+console.log(arr1[0].toFixed(), arr2[0].split(''))
 
 export default defineComponent({
   name: 'panel',
@@ -33,45 +45,38 @@ export default defineComponent({
       default: true,
     },
   },
-  setup(props, { emit }) {
-    props = reactive(props)
-    let isExpendCopy = props.expend
+  setup(props) {
+    const { proxy } = getCurrentInstance() as any
+    let isExpendCopy = ref(props.expend)
     return {
-      isExpendCopy: props.expend,
-      classes: computed(() => ({
-        'storybook-button': true,
-        'storybook-button--primary': props.primary,
-        'storybook-button--secondary': !props.primary,
-        [`storybook-button--${props.size || 'medium'}`]: true,
-      })),
-      style: computed(() => ({
-        backgroundColor: props.backgroundColor,
-      })),
+      isExpendCopy,
+      iconClass: computed(() => {
+        if (isExpendCopy.value) {
+          return [proxy.$style.panel_title_icon, proxy.$style.panel_title_icon__active, proxy.$style.mf_icon_xiangshang2]
+        } else {
+          return [proxy.$style.panel_title_icon, proxy.$style.mf_icon_xiangshang2]
+        }
+      }),
+      // style: computed(() => ({
+      //   backgroundColor: props.backgroundColor,
+      // })),
       checkout() {
         if (props.showToggle) {
-          this.isExpendCopy = !this.isExpendCopy
+          // isExpendCopy = !isExpendCopy.value
         }
       },
     }
   },
-  methods: {
-    checkout: function () {
-      if (this.showToggle) {
-        this.isExpendCopy = !this.isExpendCopy
-      }
-    },
-  },
-  computed: {
-    iconClass() {
-      if (this.isExpendCopy) {
-        return 'panel-title-icon panel-title-icon__active mf-icon-xiangshang2'
-      } else {
-        return 'panel-title-icon mf-icon-xiangshang2'
-      }
-    },
-  },
+  // methods: {
+  //   checkout: function () {
+  //     if (proxy.showToggle) {
+  //       isExpendCopy = !isExpendCopy
+  //     }
+  //   },
+  // },
 })
 </script>
-<style scoped lang="scss">
+
+<style lang="scss" module>
 @import './index.scss';
 </style>
