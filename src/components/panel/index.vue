@@ -2,7 +2,7 @@
   <div :class="$style.panel">
     <div :class="$style.panel_title" @click="checkout()">
       <div>{{ title }}</div>
-      <div :class="$style.panel_iconBox" v-if="showToggle" style="">
+      <div :class="$style.panel_iconBox" v-if="showToggle">
         <i :class="iconClass"></i>
       </div>
     </div>
@@ -15,19 +15,7 @@
 </template>
 
 <script lang="ts">
-import { getCurrentInstance, ref, defineComponent, reactive, computed } from 'vue'
-
-function createArray(value: any, count: number): any[] {
-  const arr: any[] = []
-  for (let index = 0; index < count; index++) {
-    arr.push(value)
-  }
-  return arr
-}
-
-const arr1 = createArray(11, 3)
-const arr2 = createArray('aa', 3)
-console.log(arr1[0].toFixed(), arr2[0].split(''))
+import { getCurrentInstance, ref, defineComponent, computed } from 'vue'
 
 export default defineComponent({
   name: 'panel',
@@ -52,31 +40,22 @@ export default defineComponent({
       isExpendCopy,
       iconClass: computed(() => {
         if (isExpendCopy.value) {
-          return [proxy.$style.panel_title_icon, proxy.$style.panel_title_icon__active, proxy.$style.mf_icon_xiangshang2]
+          return [proxy.$style.panel_title_icon, proxy.$style.panel_title_icon__active, proxy.$style.mini_icon_xiangshang2]
         } else {
-          return [proxy.$style.panel_title_icon, proxy.$style.mf_icon_xiangshang2]
+          return [proxy.$style.panel_title_icon, proxy.$style.mini_icon_xiangshang2]
         }
       }),
-      // style: computed(() => ({
-      //   backgroundColor: props.backgroundColor,
-      // })),
       checkout() {
         if (props.showToggle) {
-          // isExpendCopy = !isExpendCopy.value
+          isExpendCopy.value = !isExpendCopy.value
         }
       },
     }
   },
-  // methods: {
-  //   checkout: function () {
-  //     if (proxy.showToggle) {
-  //       isExpendCopy = !isExpendCopy
-  //     }
-  //   },
-  // },
 })
 </script>
 
 <style lang="scss" module>
+@import '@/styles/index.scss';
 @import './index.scss';
 </style>

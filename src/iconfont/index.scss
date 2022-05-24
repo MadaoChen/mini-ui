@@ -1,0 +1,21 @@
+@import './iconfont.scss';
+
+// ----------- 自定义样式 -------------
+
+[class*='mini_icon'],
+[class^='mini_icon_'] {
+    font-family: 'iconfont' !important;
+    display: inline-block;
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.mini_icon_jiazai1 {
+  animation: mf-loading .8s linear infinite;
+}

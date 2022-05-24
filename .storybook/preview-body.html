@@ -1,0 +1,23 @@
+<!-- .storybook/preview-body.html -->
+
+<script>
+  // 计算html的font-size
+  (function () {
+    function resizeBaseFontSize() {
+      var rootHtml = document.documentElement,
+        deviceWidth = rootHtml.clientWidth
+
+      if (deviceWidth > 640) {
+        deviceWidth = 640
+      }
+
+      rootHtml.style.fontSize = deviceWidth / 10 + 'px'
+      document.getElementsByTagName("body")[0].style.fontSize = (120 / 375) + 'rem'
+    }
+
+    resizeBaseFontSize()
+
+    window.addEventListener('resize', resizeBaseFontSize, false)
+    window.addEventListener('orientationchange', resizeBaseFontSize, false)
+  })()
+</script>

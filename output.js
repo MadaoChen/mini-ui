@@ -74,7 +74,7 @@
             loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/cache-loader/dist/cjs.js',
             options: {
               cacheDirectory: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/.cache/vue-loader',
-              cacheIdentifier: '7cd3a2d7'
+              cacheIdentifier: 'f66c23ac'
             }
           },
           /* config.module.rule('vue').use('vue-loader') */
@@ -82,7 +82,7 @@
             loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/@vue/cli-service/node_modules/vue-loader-v16/dist/index.js',
             options: {
               cacheDirectory: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/.cache/vue-loader',
-              cacheIdentifier: '7cd3a2d7',
+              cacheIdentifier: 'f66c23ac',
               babelParserPlugins: [
                 'jsx',
                 'classProperties',
@@ -214,10 +214,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('css').oneOf('vue-modules').use('postcss-loader') */
@@ -249,8 +247,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('css').oneOf('vue').use('postcss-loader') */
@@ -284,10 +281,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('css').oneOf('normal-modules').use('postcss-loader') */
@@ -318,12 +313,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('css').oneOf('normal').use('postcss-loader') */
@@ -363,10 +353,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('postcss').oneOf('vue-modules').use('postcss-loader') */
@@ -398,8 +386,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('postcss').oneOf('vue').use('postcss-loader') */
@@ -433,10 +420,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('postcss').oneOf('normal-modules').use('postcss-loader') */
@@ -467,12 +452,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('postcss').oneOf('normal').use('postcss-loader') */
@@ -512,10 +492,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('scss').oneOf('vue-modules').use('postcss-loader') */
@@ -554,8 +532,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('scss').oneOf('vue').use('postcss-loader') */
@@ -596,10 +573,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('scss').oneOf('normal-modules').use('postcss-loader') */
@@ -637,12 +612,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('scss').oneOf('normal').use('postcss-loader') */
@@ -689,10 +659,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('sass').oneOf('vue-modules').use('postcss-loader') */
@@ -734,8 +702,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('sass').oneOf('vue').use('postcss-loader') */
@@ -779,10 +746,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('sass').oneOf('normal-modules').use('postcss-loader') */
@@ -823,12 +788,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('sass').oneOf('normal').use('postcss-loader') */
@@ -878,10 +838,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('less').oneOf('vue-modules').use('postcss-loader') */
@@ -920,8 +878,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('less').oneOf('vue').use('postcss-loader') */
@@ -962,10 +919,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('less').oneOf('normal-modules').use('postcss-loader') */
@@ -1003,12 +958,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('less').oneOf('normal').use('postcss-loader') */
@@ -1055,10 +1005,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('stylus').oneOf('vue-modules').use('postcss-loader') */
@@ -1098,8 +1046,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('stylus').oneOf('vue').use('postcss-loader') */
@@ -1141,10 +1088,8 @@
                   sourceMap: false,
                   importLoaders: 2,
                   modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                    localIdentName: '[name]_[local]_[hash:base64:5]'
+                  }
                 }
               },
               /* config.module.rule('stylus').oneOf('normal-modules').use('postcss-loader') */
@@ -1183,12 +1128,7 @@
                 loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/css-loader/dist/cjs.js',
                 options: {
                   sourceMap: false,
-                  importLoaders: 2,
-                  modules: {
-                    localIdentName: '[local]-[hash:base64:8]',
-                    namedExport: true
-                  },
-                  esModule: true
+                  importLoaders: 2
                 }
               },
               /* config.module.rule('stylus').oneOf('normal').use('postcss-loader') */
@@ -1225,7 +1165,7 @@
             loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/cache-loader/dist/cjs.js',
             options: {
               cacheDirectory: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/.cache/babel-loader',
-              cacheIdentifier: '6b2fd41a'
+              cacheIdentifier: '63524488'
             }
           },
           /* config.module.rule('js').use('babel-loader') */
@@ -1255,7 +1195,7 @@
                 '.tsx'
               ],
               cache: true,
-              cacheIdentifier: 'c4feedca',
+              cacheIdentifier: '33e87654',
               emitWarning: false,
               emitError: false,
               eslintPath: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/eslint',
@@ -1273,7 +1213,7 @@
             loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/cache-loader/dist/cjs.js',
             options: {
               cacheDirectory: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/.cache/ts-loader',
-              cacheIdentifier: '54cc4653'
+              cacheIdentifier: '543a5a35'
             }
           },
           /* config.module.rule('ts').use('babel-loader') */
@@ -1302,7 +1242,7 @@
             loader: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/cache-loader/dist/cjs.js',
             options: {
               cacheDirectory: '/Users/chenyun/Projects/MyProject/mini-ui/node_modules/.cache/ts-loader',
-              cacheIdentifier: '54cc4653'
+              cacheIdentifier: '543a5a35'
             }
           },
           /* config.module.rule('tsx').use('babel-loader') */

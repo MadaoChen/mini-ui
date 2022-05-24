@@ -5,6 +5,9 @@ function resolve(dir) {
 }
 
 module.exports = function({ config }) {
+  // config.postcss = function() {
+  //   return [require('postcss-px2rem')({remUnit: 75})];
+  // }
   config.module.rules.push({
     test: /\.scss$/,
     // loaders: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
@@ -17,6 +20,16 @@ module.exports = function({ config }) {
           modules: {
             localIdentName: "[local]-[hash:base64:8]",
           },
+        }
+      },
+      {
+        loader: 'postcss-loader',
+        options: {
+          plugins: [
+            require('postcss-px2rem')({
+              remUnit: 37.5
+            })
+          ]
         }
       },
       { loader: 'sass-loader' }

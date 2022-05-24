@@ -7,8 +7,12 @@ module.exports = {
           localIdentName: '[local]-[hash:base64:8]',
         },
       },
-      scss: {
-        additionalData: '@import "~@/variables.scss";',
+      postcss: {
+        plugins: [
+          require('postcss-px2rem')({
+            remUnit: 37.5,
+          }),
+        ],
       },
     },
   },

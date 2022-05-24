@@ -1,4 +1,5 @@
 <template>
+  <div class="nav">都是冯绍峰</div>
   <router-view />
 </template>
 
@@ -11,7 +12,7 @@
   color: #2c3e50;
 }
 
-#nav {
+.nav {
   padding: 30px;
 
   a {

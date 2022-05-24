@@ -1,13 +1,6 @@
-const customViewports = {
-  iPhone6: {
-    name: 'iPhone 6',
-    styles: {
-      height: '667px',
-      width: '375px',
-    },
-    type: 'mobile',
-  },
-}
+// 控制 Canvas 样式
+import { INITIAL_VIEWPORTS } from '@storybook/addon-viewport';
+
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
   controls: {
@@ -17,7 +10,8 @@ export const parameters = {
     },
   },
   viewport: {
-    viewports: customViewports,
-    defaultViewport: 'iPhone6'
-  }
+    viewports: INITIAL_VIEWPORTS,
+    defaultViewport: 'iphone6'
+  },
+  layout: 'fullscreen', // 删除sb body 默认的 1rem padding
 }
